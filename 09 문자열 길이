@@ -1,0 +1,22 @@
+#include <stdio.h>
+#include <string.h>		//문자열함수 4가지 : strlen, strcpy, strcat, strcmp
+
+int main() {
+	char str[] = "hello";//문자열 길이는 6(hello 5자 + null문자 1)
+
+	int len;
+
+	len = strlen(str);//문자열 길이 확인
+
+	printf("string's length : %d ", len);
+
+	char str2[100];
+
+	strcpy(str2, str);//문자 복사
+	printf("str2 : %s", str2);
+
+	strcat(str2, ", hi!!");//문자 덫붙이기
+
+	int cmp = strcmp(str, str2);//사전수 비교 str이 str2보다 앞쪽에 있을때 = -1, 같을때 = 0, str2가 str보다 앞쪽에 있을때 1
+
+}
