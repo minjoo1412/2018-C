@@ -1,0 +1,79 @@
+#include<stdio.h>
+#define PI 3.14159
+
+/* 상수선언의 기본
+const int start = 0;
+const int load = 1;
+const int save = 2;
+const int exit = 3;
+*/
+
+//enum 선언, enum도 상수임, 위와 같은 내용, 뒤의 숫자를 생략해도 enum함수가 지정해줌 
+enum game {
+	start = 0,
+	load = 1,
+	save = 2,
+	exit = 3
+};
+
+//매크로
+#define print printf("\n");
+
+//매크로2
+#define square1(x) ((x)*(x))
+int square2(int a) {
+	return a*a;
+}
+
+int max(int a, int b) {
+	/*
+	if (a > b) {return a;}
+	else { return b; }
+	*/
+	return (a > b) ? a : b;//3항 연산자로써  (a>b) ? a:b   == a가 b보다 크다면 a를 출력하고 아니면 b를 출력하라는 뜻
+}
+
+#define MAX(A,B) (((A)>(B)) ? (A) : (B))
+#define loop while(true)
+
+
+int main() {
+	//const float PI = 3.14;//값을 바꿀 수 없음, 대부분 상수는 대문자로 사용
+
+	float a = PI;
+
+	//enum : 
+	int coin = 0;
+	while (true) {
+		switch (coin) {
+		case start:
+			break;
+		case load:
+			break;
+		case save:
+			break;
+		case exit:
+			break;
+		}
+	}
+
+	//매크로
+	print;
+
+	//매크로2  함수 vs 매크로
+	int b = 5;
+	printf("%d\n",square1(b));
+	printf("%d\n", square2(b));
+	//매크로의 문제점 = 함수는 바로 값이 출력되어 연산에 문제가 않되지만 매크로는 식 자체를 출력하기 때문에 연산에 오류가 생길 수 있으니 주의해서 짤것
+	printf("%d\n", 100/square2(b));//100 / 5*5 -> 20*5 -> 100
+	//현재는 define에 괄호를 해놓아서 정상출력 가능, 변수와 연산자마다 괄호를 넣어주면 안전한 식이 될 수 있다.
+
+	int int2 = 0;
+	loop{
+		printf("2");
+	int2++;
+			if (int2 > 5){
+				break;
+		}
+	}
+}
