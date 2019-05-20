@@ -1,0 +1,18 @@
+#include <stdio.h>
+
+int main() {
+	printf("Hello, World!\n");
+	printf("ㅇㅈㅇ)/\n");
+
+	printf("%d + %d\n", 5, 10);
+	printf("%c %c\n", 'e', 'h');
+	printf("%s\n", "안녕하세요");
+
+	int a;
+	int b;
+
+	a = 3;
+	printf("%d\n", a);
+	b = 5;
+	printf("%d + %d = %d", a, b, a + b);
+}
