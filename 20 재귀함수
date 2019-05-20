@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+//재귀함수 : 자기자신안에 자기자신(함수)를 넣는 것, factorial(팩토리얼)에 사용가능  5! = 5*4*3*2*1
+void rec(int n) {
+	if (n > 5) return;
+	printf("ㅇㅈㅇ/\n");
+	rec(n+1);
+}
+
+int factorial(int n) {
+	if (n == 1) return 1;
+	return n * factorial(n - 1);
+}
+
+// call-by-value : 값만 받는것(변수를 바꿀 수 없음), call-by-reference : 상호작용 가능, 변수를 바꿀 수 있음
+void printarr(int arr[4]) {
+	for (int i = 0; i < 4; i++) {
+		arr[i] *= 2;
+		printf("%d ", arr[i]);
+	}
+}
+
+void nospacebar(const char str[]) {
+	for (int i = 0; str[i] != '\0'; i++) {
+		if (str[i] != ' ') {
+			printf("%c", str[i]);
+		}
+	}
+}
+
+int main() {
+	rec(1);
+
+	int arr1[4] = { 1,2,3,4 };
+	printarr(arr1);
+
+	nospacebar("hi my name is kim\n");
+
+}
