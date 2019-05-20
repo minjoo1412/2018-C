@@ -1,0 +1,86 @@
+#include<stdio.h>
+
+int main() {
+	/*
+	int a[6]; //배열 0~5까지 있음
+	
+
+	for (int i = 0; i < 6; i++) {
+		a[i] = 1;
+	}
+
+	int b[5] = { 3,1,4,1,5 };//b[]로도 표현 가능
+	
+	printf("%d\n", sizeof(b));
+
+	for (int i = 0; i < sizeof(b) / sizeof(int); i++) {
+		printf("%d\n", b[i]);
+	}
+
+	int num3;
+	int arr[100];//배열을 선언할때 안에 숫자를 넣지 않으면 작동을 안하므로 적당히 큰 숫자를 집어넣는다.
+	printf("insert array's length : ");
+	scanf_s("%d", &num3);
+	for (int i = 0; i < num3; i++) {
+		scanf_s("%d", &arr[i]);
+	}
+
+	printf("\n");
+
+	for (int i = num3-1; i >= 0; i--) {
+		printf("%d ", arr[i]);
+	}
+	printf("\n");
+
+	//최대값 구하기
+	int max = arr[0];
+	for (int i = 1; i < num3; i++) {
+		if (max < arr[i]) {
+			max = arr[i];
+		}
+	}
+	printf("max is : %d\n", max);
+
+	int n1, n2;
+	scanf_s("%d", &n1);
+	scanf_s("%d", &n2);
+	int arr2[100][100];
+	for (int i = 0; i < n1; i++) {
+		for (int j = 0; j < n2; j++) {
+			arr2[i][j] = i + j;
+			printf("%d ", arr2[i][j]);
+		}
+		printf("\n");
+	}
+
+	int num4;
+	printf("insert number : \n");
+	scanf_s("%d", &num4);
+	int arr3[100][100];
+
+	for (int i = 0; i <= num4; i++) {
+		for (int j = 0; j <= i; j++) {
+			if (i == j || j == 0) {
+				arr3[i][j] = 1;
+			}
+			else {
+				arr3[i][j] = arr3[i - 1][j - 1] + arr3[i - 1][j];
+			}
+			printf("%d ", arr3[i][j]);
+		}printf("\n");
+	}
+	*/
+
+	char nul[] = "abc"; //배열 크기는 4가 나오며 null문자가 마지막에 /0가 있고 문자열의 끝을 알린다.  [a][b][c][/0]  
+	char arr5[100] = "hello world";
+
+	printf("%s\n", arr5);
+
+	char arr6[10];
+	printf("문자열을 입력하십시오");
+	for (int i = 0; i < 10; i++) {
+		scanf_s("%s", arr6[i]);		//문자열 입력 시에는 &를 붙이면 에러가 난다.
+	}
+	
+
+}
