@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+	double a = 10;
+	double b = 3;
+
+	printf("%.3f\n", a / b);
+
+	printf("%d\n", sizeof(a));
+	// sizeof(x) : x의 크기를 알려줌
+	// x : int float 변수이름 등등
+
+	//형변환
+	//정수 / 실수 = 정수
+	//실수 / 정수 = 실수
+	//실수 / 실수 = 실수
+	int math = 90, korean = 95, english = 96;
+	int sum = math + korean + english;
+	double avg = (double)sum / 3;//(double) = 형변환
+	printf("%.3f\n", avg);
+
+	int x, y;
+	scanf_s("%d%d", &x, &y);
+	printf("%d %d", x, y);
+}
