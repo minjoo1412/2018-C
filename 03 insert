@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+	/*
+	char a = 100;
+	printf("%c %c\n", 97, a);
+
+	int b, c;
+	scanf_s("%d %d", &b, &c);
+	printf("두 수의 합은 %d\n", b + c);
+
+	float kg;
+	float m;
+	printf("몸무게");
+	scanf_s("%f", &kg);
+	printf("키");
+	scanf_s("%f", &m);
+	float bmi = kg / (m*m);
+	printf("체질량지수는 %f \n", bmi);
+	*/
+
+	char alpha;
+	printf("입력할 알파벳  ");
+	scanf_s("%c", &alpha);
+	char next = alpha + 1;
+	printf("다음 알파벳  %c", next);
+
+	int min = 3;
+	int max = 5;
+
+	bool bol = min < max;
+	printf("%d", bol);//0 or 1
+
+	//논리연산자  &&(and) ||(or) !(not)
+}
