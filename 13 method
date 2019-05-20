@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+//전역변수
+int inven = 0;
+int money = 100;
+
+void buyitem(int cost) {//매개변수를 포함한 함수
+	
+	if (money >= cost) {
+		inven++;
+		money -= cost;
+		printf("구입");
+		printf("개수");
+		printf("잔액");
+	}
+}
+
+void swap(int *x, int *y) {
+	int tmp = *x;
+	*x = *y;
+	*y = tmp;
+}
+
+int plus(int a, int b) {//return 더하기 
+	return a + b;
+	return a - b;//이 return은 활성화가 않됨. 첫번째 return에서 함수가 끝나기 때문
+}
+
+int main() {
+	buyitem(30);
+	
+	buyitem(20);
+	
+
+	//값 바꾸기
+	int one, two;
+
+	scanf_s("%d%d", &one, &two);
+
+	swap(&one, &two);
+
+}
