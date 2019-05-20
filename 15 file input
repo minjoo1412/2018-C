@@ -1,0 +1,30 @@
+#define _CRT_SECURE_NO_WARNINGS
+//보안관련 경고하지말것 (실전에서는 사용하지 말것)
+#include <stdio.h>
+
+int main() {
+	FILE *in, *out; // 파일스트림
+	int n;
+
+	in = fopen("input.txt", "r");//input.txt를 읽기전용으로 가져온다
+	out = fopen("output.txt", "w");//w = 쓰기전용으로 가져온다(파일에 있는 내용이 다 사라짐), a = 쓰기전용(파일안 내용은 그대로이고, 다음줄부터 출력)
+
+	fscanf_s(in,"%d", &n);
+	fprintf(out, "%d\n", n);
+
+	fclose(in);
+	fclose(out);
+	//만일 텍스트파일이 없거나 null값일때
+	/*
+	FILE *non;
+	int m;
+
+	non = fopen("input.txt", "r");
+
+	if (non != nullptr) {
+		fscanf_s(non, "%d", &m);
+		printf("%d\n", m);
+		fclose(non);
+	}
+	*/
+}
