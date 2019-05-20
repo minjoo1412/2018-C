@@ -1,0 +1,12 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+int main() {
+	FILE *mon = fopen("파일입출력2.cpp", "r");
+	char name;
+	while (!feof(mon)) {
+		fscanf_s(mon, "%c", &name);
+		printf("%c", name);
+	}
+	fclose(mon);
+}
