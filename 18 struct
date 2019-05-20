@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+struct time {
+	int h, m, s;
+
+	int totalsec() {
+		return 3600 * h + 60 * m + s;
+	}
+};
+
+
+	struct point {
+		int x, y;
+
+		void moveright() { x++; }
+		void moveleft() { x--; }
+		void moveup() { y++; }
+		void movedown() { y--; }
+	};
+
+	int main() {
+		time t = { 1,4,23 };
+		printf("%d\n", t.totalsec());
+
+
+		point p = { 2,5 };
+		p.moveleft();
+		p.moveup();
+		printf("%d,%d", p.x, p.y);
+
+	}
