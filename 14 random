@@ -1,0 +1,28 @@
+#include <stdlib.h>		//랜덤함수, exit 함수
+#include <time.h>
+#include <stdio.h>
+
+
+int main() {
+	//난수 만들기(1~10), seed를 넣어주지 않는다면 값이 다 똑같다, seed에는 현재시간을 자주 넣는다.
+	srand(time(NULL));//time(NULL) = 2019 2 2  14:30 를 초로 변환, srand() = seed설정
+
+	for (int i = 1; i <= 10; i++) {
+		printf("%d\n", rand() % 10 + 1);
+	}
+
+
+	//exit(0);  함수종료
+	int sum = 0;
+
+	for (int i = 0; i < 5; i++) {
+		int n;
+		scanf_s("%d", &n);
+
+		if (n <= 0) {
+			printf("input error");
+			exit(0);
+		}
+		sum += n;
+	}	
+}
